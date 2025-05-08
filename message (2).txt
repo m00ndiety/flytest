@@ -520,19 +520,33 @@ local function PWIS_fake_script() -- Mainframe.FlyMethod
 				-- Smooth transition
 				ctrl = ctrl:Lerp(targetDir, 0.25)
 	
-				local moveVec = (cam.CFrame:VectorToWorldSpace(ctrl)) * speed
-				bv.Velocity = moveVec
-	
-				local maxspeed = speedValue.Value
-				if ctrl.Magnitude > 0 then
-					speed += 0.5 + (speed / maxspeed)
-					if speed > maxspeed then speed = maxspeed end
-				else
-					speed -= 1
-					if speed < 0 then speed = 0 end
-				end
-	
-				bg.CFrame = cam.CFrame
+				-- Get camera direction, ignoring pitch
+local camCFrame = cam.CFrame
+local forward = camCFrame.LookVector
+local right = camCFrame.RightVector
+
+-- Flatten movement to horizontal plane
+forward = Vector3.new(forward.X, 0, forward.Z).Unit
+right = Vector3.new(right.X, 0, right.Z).Unit
+
+-- Combine movement directions
+local moveDirection = (forward * ctrl.Z) + (right * ctrl.X)
+moveDirection = moveDirection.Unit
+
+-- Apply speed and clamp
+local moveVec = moveDirection * speed
+bv.Velocity = moveVec
+
+-- Smooth acceleration/deceleration
+if ctrl.Magnitude > 0 then
+    speed = math.min(speed + 0.5, speedValue.Value)
+else
+    speed = math.max(speed - 0.5, 0)
+end
+
+-- Keep character upright and aligned with camera yaw
+local yawOnly = CFrame.fromOrientation(camCFrame.Orientation.X, camCFrame.Orientation.Y, 0)
+bg.CFrame = yawOnly
 			end
 		end)
 	end
