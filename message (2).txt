@@ -1,0 +1,783 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Vfly = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+local UIGradient = Instance.new("UIGradient")
+local TopTitle = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Hiders = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UIPadding = Instance.new("UIPadding")
+local Info = Instance.new("ImageLabel")
+local Invite = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Clipboard = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local Increase = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local Speed = Instance.new("TextBox")
+local UICorner_6 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Decrease = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local Notify = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local DropShadowHolder_2 = Instance.new("Frame")
+local DropShadow_2 = Instance.new("ImageLabel")
+local Title_2 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local Message = Instance.new("TextLabel")
+local MainToggler = Instance.new("Frame")
+local Toggling = Instance.new("ImageButton")
+local UICorner_11 = Instance.new("UICorner")
+local DropShadowHolder_3 = Instance.new("Frame")
+local DropShadow_3 = Instance.new("ImageLabel")
+
+--Properties:
+
+Vfly.Name = "Vfly"
+Vfly.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = Vfly
+Mainframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Mainframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mainframe.BorderSizePixel = 0
+Mainframe.Position = UDim2.new(0.100000001, 0, 0.200000003, 0)
+Mainframe.Size = UDim2.new(0, 200, 0, 100)
+
+UICorner.Parent = Mainframe
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.Parent = Mainframe
+DropShadowHolder.BackgroundTransparency = 1.000
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder.ZIndex = 0
+
+DropShadow.Name = "DropShadow"
+DropShadow.Parent = DropShadowHolder
+DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow.BackgroundTransparency = 1.000
+DropShadow.BorderSizePixel = 0
+DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow.Size = UDim2.new(1, 47, 1, 47)
+DropShadow.ZIndex = 0
+DropShadow.Image = "rbxassetid://6014261993"
+DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow.ImageTransparency = 0.500
+DropShadow.ScaleType = Enum.ScaleType.Slice
+DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Rotation = 134
+UIGradient.Parent = Mainframe
+
+TopTitle.Name = "TopTitle"
+TopTitle.Parent = Mainframe
+TopTitle.BackgroundColor3 = Color3.fromRGB(142, 0, 161)
+TopTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopTitle.BorderSizePixel = 0
+TopTitle.Size = UDim2.new(0, 200, 0, 30)
+
+UICorner_2.Parent = TopTitle
+
+Hiders.Name = "Hiders"
+Hiders.Parent = TopTitle
+Hiders.BackgroundColor3 = Color3.fromRGB(142, 0, 161)
+Hiders.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hiders.BorderSizePixel = 0
+Hiders.Position = UDim2.new(0, 0, 0.666666687, 0)
+Hiders.Size = UDim2.new(0, 200, 0, 10)
+
+Frame.Parent = Hiders
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 1, 0)
+Frame.Size = UDim2.new(0, 200, 0, 1)
+Frame.ZIndex = 7
+
+Title.Name = "Title"
+Title.Parent = TopTitle
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 200, 0, 30)
+Title.Font = Enum.Font.Arcade
+Title.Text = "VFLY GUI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 24.000
+
+UIPadding.Parent = Title
+UIPadding.PaddingLeft = UDim.new(-0.349999994, 0)
+
+Info.Name = "Info"
+Info.Parent = TopTitle
+Info.Active = true
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info.BorderSizePixel = 0
+Info.Position = UDim2.new(0.805000007, 0, 0, 0)
+Info.Selectable = true
+Info.Size = UDim2.new(0, 30, 0, 30)
+Info.Image = "rbxassetid://10723415903"
+
+Invite.Name = "Invite"
+Invite.Parent = Info
+Invite.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Invite.BackgroundTransparency = 0.700
+Invite.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Invite.BorderSizePixel = 0
+Invite.Position = UDim2.new(-1.20000005, 0, -1.13333333, 0)
+Invite.Size = UDim2.new(0, 170, 0, 27)
+Invite.Visible = false
+Invite.Font = Enum.Font.SourceSans
+Invite.Text = "https://discord.gg/ZCTumQAAXK"
+Invite.TextColor3 = Color3.fromRGB(255, 255, 255)
+Invite.TextSize = 14.000
+
+UICorner_3.Parent = Invite
+
+Clipboard.Name = "Clipboard"
+Clipboard.Parent = Invite
+Clipboard.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Clipboard.BackgroundTransparency = 0.400
+Clipboard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clipboard.BorderSizePixel = 0
+Clipboard.Position = UDim2.new(1.03896165, 0, 0, 0)
+Clipboard.Size = UDim2.new(0, 30, 0, 27)
+Clipboard.Image = "rbxassetid://10709799288"
+
+UICorner_4.Parent = Clipboard
+
+Increase.Name = "Increase"
+Increase.Parent = Mainframe
+Increase.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Increase.BackgroundTransparency = 1.000
+Increase.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Increase.BorderSizePixel = 0
+Increase.Position = UDim2.new(0.0350000001, 0, 0.349999994, 5)
+Increase.Size = UDim2.new(0, 50, 0, 50)
+Increase.Image = "rbxassetid://10734924532"
+
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Increase
+
+Speed.Name = "Speed"
+Speed.Parent = Mainframe
+Speed.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.375, 0, 0.400000006, 0)
+Speed.Size = UDim2.new(0, 50, 0, 20)
+Speed.Font = Enum.Font.Arcade
+Speed.Text = "1"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = Speed
+
+Fly.Name = "Fly"
+Fly.Parent = Mainframe
+Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fly.BackgroundTransparency = 1.000
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.375, 0, 0.649999976, 5)
+Fly.Size = UDim2.new(0, 50, 0, 20)
+Fly.Font = Enum.Font.Arcade
+Fly.Text = "FLY"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = Fly
+
+Decrease.Name = "Decrease"
+Decrease.Parent = Mainframe
+Decrease.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Decrease.BackgroundTransparency = 1.000
+Decrease.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Decrease.BorderSizePixel = 0
+Decrease.Position = UDim2.new(0.704999983, 0, 0.349999994, 5)
+Decrease.Size = UDim2.new(0, 50, 0, 50)
+Decrease.Image = "rbxassetid://10734896206"
+
+UICorner_8.CornerRadius = UDim.new(0, 5)
+UICorner_8.Parent = Decrease
+
+Notify.Name = "Notify"
+Notify.Parent = Mainframe
+Notify.AnchorPoint = Vector2.new(0.5, 0.5)
+Notify.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Notify.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notify.BorderSizePixel = 0
+Notify.Position = UDim2.new(2.15500021, 0, 1.45000005, 0)
+Notify.Size = UDim2.new(0, 260, 0, 160)
+Notify.Visible = false
+
+UICorner_9.Parent = Notify
+
+DropShadowHolder_2.Name = "DropShadowHolder"
+DropShadowHolder_2.Parent = Notify
+DropShadowHolder_2.BackgroundTransparency = 1.000
+DropShadowHolder_2.BorderSizePixel = 0
+DropShadowHolder_2.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_2.ZIndex = 0
+
+DropShadow_2.Name = "DropShadow"
+DropShadow_2.Parent = DropShadowHolder_2
+DropShadow_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_2.BackgroundTransparency = 1.000
+DropShadow_2.BorderSizePixel = 0
+DropShadow_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_2.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_2.ZIndex = 0
+DropShadow_2.Image = "rbxassetid://6014261993"
+DropShadow_2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow_2.ImageTransparency = 0.500
+DropShadow_2.ScaleType = Enum.ScaleType.Slice
+DropShadow_2.SliceCenter = Rect.new(49, 49, 450, 450)
+
+Title_2.Name = "Title"
+Title_2.Parent = Notify
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderSizePixel = 0
+Title_2.Size = UDim2.new(0, 260, 0, 28)
+Title_2.Font = Enum.Font.Arcade
+Title_2.Text = "Hey There!"
+Title_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.TextSize = 14.000
+
+UICorner_10.Parent = Title_2
+
+Frame_2.Parent = Title_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.75, 0)
+Frame_2.Size = UDim2.new(0, 260, 0, 15)
+
+Message.Name = "Message"
+Message.Parent = Notify
+Message.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Message.BackgroundTransparency = 1.000
+Message.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Message.BorderSizePixel = 0
+Message.Position = UDim2.new(0.115384616, 0, 0.25, 0)
+Message.Size = UDim2.new(0, 200, 0, 62)
+Message.Font = Enum.Font.Arcade
+Message.Text = "Please sit in a vehicle seat before flying!"
+Message.TextColor3 = Color3.fromRGB(255, 255, 255)
+Message.TextScaled = true
+Message.TextSize = 14.000
+Message.TextWrapped = true
+
+MainToggler.Name = "MainToggler"
+MainToggler.Parent = Vfly
+MainToggler.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainToggler.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainToggler.BorderSizePixel = 0
+MainToggler.Position = UDim2.new(0.0991658941, 0, 0.549586773, 0)
+MainToggler.Size = UDim2.new(0, 35, 0, 35)
+
+Toggling.Name = "Toggling"
+Toggling.Parent = MainToggler
+Toggling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggling.BackgroundTransparency = 1.000
+Toggling.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggling.BorderSizePixel = 0
+Toggling.Size = UDim2.new(0, 35, 0, 35)
+Toggling.Image = "rbxassetid://10734897102"
+
+UICorner_11.Parent = MainToggler
+
+DropShadowHolder_3.Name = "DropShadowHolder"
+DropShadowHolder_3.Parent = MainToggler
+DropShadowHolder_3.BackgroundTransparency = 1.000
+DropShadowHolder_3.BorderSizePixel = 0
+DropShadowHolder_3.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder_3.ZIndex = 0
+
+DropShadow_3.Name = "DropShadow"
+DropShadow_3.Parent = DropShadowHolder_3
+DropShadow_3.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow_3.BackgroundTransparency = 1.000
+DropShadow_3.BorderSizePixel = 0
+DropShadow_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow_3.Size = UDim2.new(1, 47, 1, 47)
+DropShadow_3.ZIndex = 0
+DropShadow_3.Image = "rbxassetid://6014261993"
+DropShadow_3.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow_3.ImageTransparency = 0.500
+DropShadow_3.ScaleType = Enum.ScaleType.Slice
+DropShadow_3.SliceCenter = Rect.new(49, 49, 450, 450)
+
+-- Scripts:
+
+local function ACZD_fake_script() -- Clipboard.LocalScript 
+	local script = Instance.new('LocalScript', Clipboard)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/ZCTumQAAXK")
+	end)
+	
+end
+coroutine.wrap(ACZD_fake_script)()
+local function XDLVYBN_fake_script() -- Increase.Increase 
+	local script = Instance.new('LocalScript', Increase)
+
+	local button = script.Parent
+	local lp = game:GetService("Players").LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		local speedVal = lp:FindFirstChild("Speed")
+		if speedVal then
+			speedVal.Value = math.clamp(speedVal.Value + 1, 0, 9999999999999)
+		end
+	end)
+	
+end
+coroutine.wrap(XDLVYBN_fake_script)()
+local function ZTZT_fake_script() -- Decrease.Decrease 
+	local script = Instance.new('LocalScript', Decrease)
+
+	local button = script.Parent
+	local lp = game:GetService("Players").LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		local speedVal = lp:FindFirstChild("Speed")
+		if speedVal then
+			speedVal.Value = math.clamp(speedVal.Value - 1, 0, 9999999999999)
+		end
+	end)
+	
+end
+coroutine.wrap(ZTZT_fake_script)()
+local function NYZYF_fake_script() -- Mainframe.Drag 
+	local script = Instance.new('LocalScript', Mainframe)
+
+	local gui = script.Parent
+	local userInputService = game:GetService("UserInputService")
+	local runService = game:GetService("RunService")
+	
+	
+	local dragging = false
+	local dragInput = nil
+	local dragStart = nil
+	local startPos = nil
+	
+	local currentPosition = gui.Position
+	local targetPosition = gui.Position
+	
+	
+	local smoothSpeed = 0.15
+	
+	local function updateTarget(input)
+		local delta = input.Position - dragStart
+		targetPosition = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	
+	runService.RenderStepped:Connect(function()
+		if dragging and dragInput then
+			updateTarget(dragInput)
+		end
+	
+	
+		currentPosition = UDim2.new(
+			currentPosition.X.Scale,
+			currentPosition.X.Offset + (targetPosition.X.Offset - currentPosition.X.Offset) * smoothSpeed,
+			currentPosition.Y.Scale,
+			currentPosition.Y.Offset + (targetPosition.Y.Offset - currentPosition.Y.Offset) * smoothSpeed
+		)
+		gui.Position = currentPosition
+	end)
+	
+end
+coroutine.wrap(NYZYF_fake_script)()
+local function PWIS_fake_script() -- Mainframe.FlyMethod 
+	local script = Instance.new('LocalScript', Mainframe)
+
+	local UIS = game:GetService("UserInputService")
+	local RS = game:GetService("RunService")
+	local Players = game:GetService("Players")
+	local lp = Players.LocalPlayer
+	
+	local gui = lp:WaitForChild("PlayerGui"):WaitForChild("Vfly"):WaitForChild("Mainframe")
+	local FlyButton = gui:WaitForChild("Fly")
+	local SpeedBox = gui:WaitForChild("Speed")
+	
+	local flying = false
+	local speed = 0
+	local ctrl = Vector3.zero
+	local targetDir = Vector3.zero
+	local bv, bg
+	
+	local speedValue = lp:FindFirstChild("Speed")
+	if not speedValue then
+		speedValue = Instance.new("NumberValue")
+		speedValue.Name = "Speed"
+		speedValue.Value = tonumber(SpeedBox.Text) or 50
+		speedValue.Parent = lp
+	end
+	
+	speedValue:GetPropertyChangedSignal("Value"):Connect(function()
+		SpeedBox.Text = tostring(speedValue.Value)
+	end)
+	
+	SpeedBox.FocusLost:Connect(function()
+		local val = tonumber(SpeedBox.Text)
+		if val then
+			speedValue.Value = math.clamp(val, 0, 999999999)
+		else
+			SpeedBox.Text = tostring(speedValue.Value)
+		end
+	end)
+	
+	local function getMoveDirection()
+		if UIS.TouchEnabled and not UIS.KeyboardEnabled then
+			local moveDir = lp.Character and lp.Character:FindFirstChildWhichIsA("Humanoid")
+			if moveDir then
+				return moveDir.MoveDirection
+			end
+		else
+			local dir = Vector3.zero
+			if UIS:IsKeyDown(Enum.KeyCode.W) then dir += Vector3.new(0, 0, -1) end
+			if UIS:IsKeyDown(Enum.KeyCode.S) then dir += Vector3.new(0, 0, 1) end
+			if UIS:IsKeyDown(Enum.KeyCode.A) then dir += Vector3.new(-1, 0, 0) end
+			if UIS:IsKeyDown(Enum.KeyCode.D) then dir += Vector3.new(1, 0, 0) end
+			return dir.Unit ~= dir.Unit and Vector3.zero or dir.Unit
+		end
+	end
+	
+	local function startFly()
+		local char = lp.Character or lp.CharacterAdded:Wait()
+		local root = char:WaitForChild("HumanoidRootPart")
+		local hum = char:FindFirstChildWhichIsA("Humanoid")
+	
+		if hum then
+			hum:ChangeState(Enum.HumanoidStateType.Physics)
+			hum.PlatformStand = true
+		end
+	
+		bg = Instance.new("BodyGyro", root)
+		bg.P = 9e4
+		bg.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.CFrame = root.CFrame
+	
+		bv = Instance.new("BodyVelocity", root)
+		bv.Velocity = Vector3.zero
+		bv.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+	
+		RS:BindToRenderStep("Flying", Enum.RenderPriority.Character.Value, function()
+			if flying and root and hum and hum.Health > 0 then
+				local cam = workspace.CurrentCamera
+				targetDir = getMoveDirection()
+	
+				-- Smooth transition
+				ctrl = ctrl:Lerp(targetDir, 0.25)
+	
+				local moveVec = (cam.CFrame:VectorToWorldSpace(ctrl)) * speed
+				bv.Velocity = moveVec
+	
+				local maxspeed = speedValue.Value
+				if ctrl.Magnitude > 0 then
+					speed += 0.5 + (speed / maxspeed)
+					if speed > maxspeed then speed = maxspeed end
+				else
+					speed -= 1
+					if speed < 0 then speed = 0 end
+				end
+	
+				bg.CFrame = cam.CFrame
+			end
+		end)
+	end
+	
+	local function stopFly()
+		RS:UnbindFromRenderStep("Flying")
+		if bv then bv:Destroy() end
+		if bg then bg:Destroy() end
+	
+		local char = lp.Character
+		if char then
+			local hum = char:FindFirstChildWhichIsA("Humanoid")
+			if hum and hum.Health > 0 then
+				hum.PlatformStand = false
+				hum:ChangeState(Enum.HumanoidStateType.GettingUp)
+			end
+		end
+	
+		ctrl = Vector3.zero
+		targetDir = Vector3.zero
+		speed = 0
+	end
+	
+	FlyButton.MouseButton1Click:Connect(function()
+		flying = not flying
+		if flying then
+			startFly()
+		else
+			stopFly()
+		end
+	end)
+	
+end
+coroutine.wrap(PWIS_fake_script)()
+local function NQGNJ_fake_script() -- Mainframe.DontMessWithThiss 
+	local script = Instance.new('LocalScript', Mainframe)
+
+	local player = game:GetService("Players").LocalPlayer
+	local gui = player:WaitForChild("PlayerGui"):WaitForChild("Vfly"):WaitForChild("Mainframe")
+	
+	
+	local speedValue = Instance.new("NumberValue")
+	speedValue.Name = "FlySpeed"
+	speedValue.Value = 1
+	speedValue.Parent = gui
+	local speedBox = gui:WaitForChild("Speed")
+	speedBox.Text = tostring(speedValue.Value)
+	
+	
+	speedValue:GetPropertyChangedSignal("Value"):Connect(function()
+		speedBox.Text = tostring(speedValue.Value)
+	end)
+	
+end
+coroutine.wrap(NQGNJ_fake_script)()
+local function TTBRXRM_fake_script() -- Vfly.Hover.Invite 
+	local script = Instance.new('LocalScript', Vfly)
+
+	local UIS = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local vfly = script.Parent
+	local mainframe = vfly:WaitForChild("Mainframe")
+	local topTitle = mainframe:WaitForChild("TopTitle")
+	local info = topTitle:WaitForChild("Info")
+	local invite = info:WaitForChild("Invite")
+	
+	local popupDuration = 5
+	local hoverDelay = 0.3  
+	local isPopupVisible = false
+	local holding = false
+	local debounce = false  
+	local originalPosition = invite.Position
+	local popupTweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
+	local hideTweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.In)
+	
+	
+	invite.Visible = false
+	invite.BackgroundTransparency = 1
+	if invite:FindFirstChildOfClass("TextLabel") then
+		invite:FindFirstChildOfClass("TextLabel").TextTransparency = 1
+	end
+	
+	
+	local function showInvite()
+		if isPopupVisible or debounce then return end 
+		debounce = true
+		isPopupVisible = true
+	
+	
+		invite.Visible = true
+		invite.Position = originalPosition + UDim2.new(0, 0, 0.05, 0)
+		invite.BackgroundTransparency = 1
+		if invite:FindFirstChildOfClass("TextLabel") then
+			invite:FindFirstChildOfClass("TextLabel").TextTransparency = 1
+		end
+	
+		TweenService:Create(invite, popupTweenInfo, {
+			Position = originalPosition,
+			BackgroundTransparency = 0
+		}):Play()
+	
+		if invite:FindFirstChildOfClass("TextLabel") then
+			TweenService:Create(invite:FindFirstChildOfClass("TextLabel"), popupTweenInfo, {
+				TextTransparency = 0
+			}):Play()
+		end
+	
+	
+		task.delay(popupDuration, function()
+			if not holding then
+				TweenService:Create(invite, hideTweenInfo, {
+					Position = originalPosition + UDim2.new(0, 0, 0.05, 0),
+					BackgroundTransparency = 1
+				}):Play()
+	
+				if invite:FindFirstChildOfClass("TextLabel") then
+					TweenService:Create(invite:FindFirstChildOfClass("TextLabel"), hideTweenInfo, {
+						TextTransparency = 1
+					}):Play()
+				end
+	
+				task.wait(0.3)
+				invite.Visible = false
+				isPopupVisible = false
+			end
+		end)
+	
+	
+		task.wait(0.5)
+		debounce = false
+	end
+	
+	
+	info.MouseEnter:Connect(function()
+		task.delay(hoverDelay, function()
+			if info:IsHovered() then
+				showInvite()
+			end
+		end)
+	end)
+	
+	
+	info.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+			holding = true
+			showInvite()
+		end
+	end)
+	
+	info.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+			holding = false
+		end
+	end)
+	
+end
+coroutine.wrap(TTBRXRM_fake_script)()
+local function QSWRTKY_fake_script() -- Vfly.Toggle 
+	local script = Instance.new('LocalScript', Vfly)
+
+	local TweenService = game:GetService("TweenService")
+	local screenGui = script.Parent
+	local mainFrame = screenGui:WaitForChild("Mainframe")
+	local mainToggler = screenGui:WaitForChild("MainToggler")
+	local togglingButton = mainToggler:WaitForChild("Toggling") 
+	
+	local originalSize = mainFrame.Size
+	local minimizedSize = UDim2.new(0, 200, 0, 30)
+	local isMinimized = false
+	
+	
+	local function minimizeMainFrame()
+	
+		local tween = TweenService:Create(mainFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = minimizedSize})
+		tween:Play()
+		mainFrame.Visible = false 
+		isMinimized = true
+	end
+	
+	
+	local function maximizeMainFrame()
+	
+		local tween = TweenService:Create(mainFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = originalSize})
+		tween:Play()
+		mainFrame.Visible = true 
+		isMinimized = false
+	end
+	
+	
+	togglingButton.MouseButton1Click:Connect(function()
+		if isMinimized then
+			maximizeMainFrame() 
+		else
+			minimizeMainFrame()
+		end
+	end)
+	
+end
+coroutine.wrap(QSWRTKY_fake_script)()
+local function YOHN_fake_script() -- Vfly.Notify 
+	local script = Instance.new('LocalScript', Vfly)
+
+	local Players = game:GetService("Players")
+	local lp = Players.LocalPlayer
+	
+	
+	local notifyFrame = lp.PlayerGui:WaitForChild("Vfly"):WaitForChild("Mainframe"):WaitForChild("Notify")
+	
+	
+	local function showNotify()
+	
+		notifyFrame.Visible = true
+	
+	
+		local tweenService = game:GetService("TweenService")
+		local fadeInTween = tweenService:Create(
+			notifyFrame, 
+			TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+			{BackgroundTransparency = 0} 
+		)
+	
+		fadeInTween:Play() 
+	
+	
+		wait(5)
+	
+	
+		local fadeOutTween = tweenService:Create(
+			notifyFrame, 
+			TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
+			{BackgroundTransparency = 1} -- Making it fully transparent
+		)
+	
+		fadeOutTween:Play() 
+	
+	
+		fadeOutTween.Completed:Wait()
+	
+	
+		notifyFrame.Visible = false
+	end
+	
+	
+	showNotify()
+	
+end
+coroutine.wrap(YOHN_fake_script)()
